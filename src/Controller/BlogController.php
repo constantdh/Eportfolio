@@ -8,18 +8,39 @@ use Symfony\Component\Routing\Attribute\Route;
 
 final class BlogController extends AbstractController
 {
-    #[Route('/blog', name: 'app_blog')]
+    #[Route('/blog/home', name: 'app_blog')]
     public function index(): Response
     {
         return $this->render('blog/home.html.twig', [
             'controller_name' => 'BlogController',
         ]);
     }
-     #[Route('/blog/home', name: 'app_blog/home')]
-    public function home(): Response
+     #[Route('/blog/cv', name: 'app_cv')]
+    public function cv(): Response
     {
-        return $this->render('blog/CV.html.twig', [
+        return $this->render('blog/Cv.html.twig', [
             'controller_name' => 'BlogController',
         ]);
+    }
+    #[Route('/blog/esp', name: 'app_esp')]
+        public function esp(): Response
+    {
+        return $this->render('blog/esp.html.twig', [
+             'controller_name' => 'BlogController',
+            ]);
+    }
+    #[Route('/blog/contacts', name: 'app_contacts')]
+        public function contacts(): Response
+    {
+        return $this->render('blog/Contact.html.twig', [
+             'controller_name' => 'BlogController',
+            ]);
+    }
+    #[Route('/blog/hobbies', name: 'app_hobbies')]
+        public function hobbies(): Response
+    {
+        return $this->render('blog/hobbies.html.twig', [
+             'controller_name' => 'BlogController',
+            ]);
     }
 }
