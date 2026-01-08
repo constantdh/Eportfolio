@@ -5,33 +5,41 @@
 {% block body %}
 
 
-<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/blog/home">Constant Eportfolio</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarColor02">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item">
-          <a class="nav-link active" href="/blog/cv">CV
-            <span class="visually-hidden">(current)</span>
-          </a>
-          </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/blog/hobbies">Hobbies</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="/blog/esp">En savoir plus
-          <span class="visually-hidden">(current)</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="/blog/contacts">Contacts
-          <span class="visually-hidden">(current)</span>
-          </a>
-        </li>
-      </ul>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/blog/home">Constant Eportfolio</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarColor02" aria-controls="navbarColor02"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor02">
+            {# Liens à gauche #}
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/blog/cv">CV</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blog/contacts">Contacts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blog/eportefolio">Eportefolio</a>
+                </li>
+            </ul>
+
+            {# Liens à droite #}
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/blog/hobbies">Hobbies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blog/esp">En savoir plus</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </nav>
 
 {# templates/blog/CV.html.twig #}
@@ -59,7 +67,7 @@
                         <li>Git / GitHub</li>
                         <li>Anglais</li>
                         <li>cablage fibre optique</li>
-
+                        <li>Installation de machines virtuelles</li>
                     </ul>
                 </div>
             </div>
@@ -70,6 +78,15 @@
                     <ul class="mb-0">
                         <li>Français (natif)</li>
                         <li>Anglais (intermédiaire)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card bg-dark text-light">
+                <div class="card-body">
+                    <h3 class="h5 mb-3">Langues</h3>
+                    <ul class="mb-0">
+                        <li><a class="nav-link" href="/blog/cv/formulaire">Telecharger le CV</a></li>
                     </ul>
                 </div>
             </div>

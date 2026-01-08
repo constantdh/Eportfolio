@@ -1,0 +1,159 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}home{% endblock %}
+
+{% block body %}
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/blog/home">Constant Eportfolio</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarColor02" aria-controls="navbarColor02"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor02">
+            {# Liens à gauche #}
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/blog/cv">CV</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blog/contacts">Contacts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blog/eportefolio">Eportefolio</a>
+                </li>
+            </ul>
+
+            {# Liens à droite #}
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/blog/hobbies">Hobbies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blog/esp">En savoir plus</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    {# ... tout ton HTML de formulaire ici ... #}
+
+    <button type="button" class="btn btn-primary" onclick="imprimerMonCV()">
+        Imprimer le CV
+    </button>
+</div>
+
+<script>
+function imprimerMonCV() {
+    const urlCV = '/blog/cv'; // mets ici l'URL exacte de ta page CV
+    const win = window.open(urlCV, '_blank');
+
+    win.onload = function () {
+        win.focus();
+        win.print();
+    };
+}
+</script>
+{% endblock %}
+<div class="container mt-5 mb-5">
+    <h1 class="mb-4">Formulaire d'inscription</h1>
+
+    <form id="cv-form" class="bg-dark p-4 rounded">
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label class="form-label" for="nom">Nom</label>
+                <input type="text" class="form-control" id="nom" required>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="form-label" for="prenom">Prénom</label>
+                <input type="text" class="form-control" id="prenom" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label class="form-label" for="email">Adresse e‑mail</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="form-label" for="telephone">Téléphone</label>
+                <input type="tel" class="form-control" id="telephone">
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label" for="adresse">Adresse</label>
+            <input type="text" class="form-control" id="adresse">
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label class="form-label" for="formation">Formation</label>
+                <input type="text" class="form-control" id="formation" placeholder="BUT, Licence, etc.">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="form-label" for="experience">Années d'expérience</label>
+                <input type="number" min="0" class="form-control" id="experience">
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label" for="competences">Compétences principales</label>
+            <textarea class="form-control" id="competences" rows="3"
+                      placeholder="HTML, CSS, PHP, Symfony, ..."></textarea>
+        </div>
+
+        <div class="mb-4">
+            <label class="form-label" for="presentation">Présentation / Objectif</label>
+            <textarea class="form-control" id="presentation" rows="3"
+                      placeholder="Quelques lignes pour se présenter."></textarea>
+        </div>
+
+        <button type="button" class="btn btn-primary" onclick="imprimerCV()">
+            Imprimer le CV (PDF / docx)
+        </button>
+        
+    </form>
+
+    {# Zone CV imprimable #}
+    <div id="cv-apercu" class="bg-dark p-4 rounded mt-5">
+        <h2 class="mb-3">CV généré</h2>
+        <p><strong>Nom :</strong> <span id="cv-nom"></span></p>
+        <p><strong>Prénom :</strong> <span id="cv-prenom"></span></p>
+        <p><strong>Email :</strong> <span id="cv-email"></span></p>
+        <p><strong>Téléphone :</strong> <span id="cv-telephone"></span></p>
+        <p><strong>Adresse :</strong> <span id="cv-adresse"></span></p>
+        <p><strong>Formation :</strong> <span id="cv-formation"></span></p>
+        <p><strong>Années d'expérience :</strong> <span id="cv-experience"></span></p>
+        <p><strong>Compétences :</strong><br><span id="cv-competences"></span></p>
+        <p><strong>Présentation :</strong><br><span id="cv-presentation"></span></p>
+    </div>
+</div>
+
+<script>
+    function imprimerCV() {
+        // Récupération des valeurs du formulaire
+        document.getElementById('cv-nom').textContent         = document.getElementById('nom').value;
+        document.getElementById('cv-prenom').textContent      = document.getElementById('prenom').value;
+        document.getElementById('cv-email').textContent       = document.getElementById('email').value;
+        document.getElementById('cv-telephone').textContent   = document.getElementById('telephone').value;
+        document.getElementById('cv-adresse').textContent     = document.getElementById('adresse').value;
+        document.getElementById('cv-formation').textContent   = document.getElementById('formation').value;
+        document.getElementById('cv-experience').textContent  = document.getElementById('experience').value;
+        document.getElementById('cv-competences').textContent = document.getElementById('competences').value;
+        document.getElementById('cv-presentation').textContent= document.getElementById('presentation').value;
+
+        // Ouvre la boîte de dialogue d'impression (PDF possible)
+        window.print();
+    }
+</script>
+
+
+{% endblock %}

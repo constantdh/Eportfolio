@@ -43,4 +43,19 @@ final class BlogController extends AbstractController
              'controller_name' => 'BlogController',
             ]);
     }
+    #[Route('/blog/eportefolio', name: 'app_eportefolio')]
+        public function eportefolio(): Response
+    {
+        return $this->render('blog/Eportefolio.html.twig', [
+             'controller_name' => 'BlogController',
+            ]);
+    }
+    #[Route('/blog/cv/formulaire', name: 'app_formulaire')]
+        public function formulaire(): Response
+    {
+        return $this->render('blog/formulaire.html.twig', [
+             'controller_name' => 'BlogController',
+            ]);
+    }
 }
+
