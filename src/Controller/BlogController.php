@@ -57,5 +57,45 @@ final class BlogController extends AbstractController
              'controller_name' => 'BlogController',
             ]);
     }
-}
+    #[Route('/blog/competence1', name: 'app_competence1')]
+            public function competence1(): Response
+        {
+            return $this->render('blog/competence1.html.twig', [
+                'controller_name' => 'BlogController',
+                ]);
+        }
+        #[Route('/blog/competence2', name: 'app_competence2')]
+            public function competence2(): Response
+        {
+            return $this->render('blog/competence2.html.twig', [
+                'controller_name' => 'BlogController',
+                ]);
+        }
+        #[Route('/blog/competence3', name: 'app_competence3')]
+            public function competence3(): Response
+        {
+            return $this->render('blog/competence3.html.twig', [
+                'controller_name' => 'BlogController',
+                ]);
+        }
+        
+
+
+        #[Route('/blog/AC', name: 'app_AC')]
+            public function AC(): Response
+        {
+            return $this->render('blog/AC.html.twig', [
+                'controller_name' => 'BlogController',
+                ]);
+        }
+        #[Route('/blog/AR', name: 'app_AR')]
+            public function AR(): Response
+        {
+            return $this->render('blog/AR.html.twig', [
+                'controller_name' => 'BlogController',
+                ]);
+        }
+    }
+
+
 

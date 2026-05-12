@@ -1,0 +1,119 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}home{% endblock %}
+
+{% block body %}
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/blog/home">Constant Eportfolio</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarColor02" aria-controls="navbarColor02"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor02">
+            {# Liens à gauche #}
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/blog/cv">CV</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blog/contacts">Contacts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blog/eportefolio">Eportefolio</a>
+                </li>
+            </ul>
+
+            {# Liens à droite #}
+                <li class="nav-item">
+                    <a class="nav-link" href="/blog/esp">En savoir plus</a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="container my-5">
+
+    {# Titre de la compétence #}
+    <h2 class="competence-titre text-center mb-2">Compétence 1</h2>
+    <h4 class="competence-sous-titre text-center mb-5">Administrer les Réseaux et l'Internet</h4>
+
+    {# Carte SAE #}
+    <div class="sae-card mx-auto">
+
+        <h3 class="sae-titre text-center mb-4">SAE 2.01</h3>
+
+        {# Image #}
+        <div class="sae-image-wrapper mb-4">
+            <img src="{{ asset('img/sae201.png') }}" alt="Topologie SAE 2.01" class="sae-image">
+        </div>
+
+        {# Description #}
+        <div class="sae-description">
+            <p>
+                Lors de la SAE 2.01 nous avons dû utiliser les apprentissages critiques,
+                nous avons mis en place un réseau d'école dans le type de UJM, ce dernier
+                devait permettre d'interconnecter 4 LAN qui correspondent à des sites
+                géographiques différents, chaque site accueille deux formations, un serveur
+                WEB pour donner les informations générales sur le VLAN service et un serveur
+                TFTP pour la sauvegarde des configurations sur le VLAN admin.
+            </p>
+
+            <p>J'ai d'abord mis en place la topologie :</p>
+
+            <ul class="sae-liste">
+                <li>Plage IP</li>
+                <li>Switchs</li>
+                <li>Routeurs</li>
+                <li>Protocoles</li>
+            </ul>
+
+            {# Image de topologie #}
+            <div class="sae-image-wrapper my-4">
+                <img src="{{ asset('img/sae201_topo.png') }}" alt="Topologie réseau" class="sae-image">
+            </div>
+
+            <p>
+                Ensuite en utilisant mes connaissances apprises durant les différents modules
+                comme le R1.01, R1.03 et R2.01 et en m'aidant d'internet je fais ma topologie
+                pour que tout puisse fonctionner et que les protocoles soient bien intégrés.
+                Les apprentissages critiques utilisés pour cette SAE et compétence sont :
+                <strong class="ac-highlight">AC 11.03</strong> et <strong class="ac-highlight">AC 11.06</strong>.
+            </p>
+        </div>
+
+    </div>
+
+</main>
+<section class="container my-5">
+    <h4 class="text-center mb-4" style="color: rgba(255,255,255,0.7);">Aller plus loin</h4>
+    <div class="row g-4 justify-content-center">
+
+        <div class="col-md-4">
+            <a href="/blog/AC" class="text-decoration-none">
+                <div class="competence-card">
+                    <h4>Apprentissages Critiques</h4>
+                    <p>Voir les AC liés à cette compétence</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-4">
+            <a href="/blog/AR" class="text-decoration-none">
+                <div class="competence-card">
+                    <h4>Analyse Réflexive</h4>
+                    <p>Mon retour sur cette compétence</p>
+                </div>
+            </a>
+        </div>
+
+    </div>
+</section>
+{% endblock %}

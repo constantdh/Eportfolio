@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Compétence 2{% endblock %}
+
+{% block body %}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/blog/home">Constant Eportfolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarColor02" aria-controls="navbarColor02"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item"><a class="nav-link" href="/blog/cv">CV</a></li>
+                <li class="nav-item"><a class="nav-link" href="/blog/contacts">Contacts</a></li>
+                <li class="nav-item"><a class="nav-link" href="/blog/eportefolio">Eportefolio</a></li>
+            </ul>
+            <li class="nav-item">
+                <a class="nav-link" href="/blog/esp">En savoir plus</a>
+            </li>
+        </div>
+    </div>
+</nav>
+
+<main class="container my-5">
+    <h2 class="competence-titre text-center mb-5">Compétence 3</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <a href="https://docs.google.com/document/d/1o9p6wh1pFoCLWhJ5a4N-v2IWI3ZCdZQZ6hOlk_cVaCg/edit?tab=t.0#heading=h.ov0f9hi4onjd" target="_blank" class="text-decoration-none">
+                <div class="competence-card">
+                    <h4>Voir le dossier complet</h4>
+                    <p>Accéder au Drive</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

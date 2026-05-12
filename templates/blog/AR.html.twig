@@ -1,0 +1,127 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}home{% endblock %}
+
+{% block body %}
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/blog/home">Constant Eportfolio</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarColor02" aria-controls="navbarColor02"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor02">
+            {# Liens à gauche #}
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/blog/cv">CV</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blog/contacts">Contacts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blog/eportefolio">Eportefolio</a>
+                </li>
+            </ul>
+
+            {# Liens à droite #}
+                <li class="nav-item">
+                    <a class="nav-link" href="/blog/esp">En savoir plus</a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="container my-5">
+
+    <h2 class="competence-titre text-center mb-2">Analyse Réflexive</h2>
+    <h4 class="competence-sous-titre text-center mb-5">Compétence 1 — Administrer les Réseaux et l'Internet</h4>
+
+    <div class="sae-card mx-auto">
+
+        {# Description de la compétence #}
+        <section class="ac-section">
+            <h5 class="ac-section-titre">Description de la compétence</h5>
+            <p>La compétence Administrer les Réseaux et l'Internet consiste à être capable de mettre en place des topologies tout en faisant face aux erreurs potentielles qui pourraient arriver.</p>
+        </section>
+
+        <hr class="ac-divider">
+
+        {# Description de la situation #}
+        <section class="ac-section">
+            <h5 class="ac-section-titre">Description de la situation (avant l'action)</h5>
+            <p>Dans la ressource R1.01c, nous avons appris à utiliser le serveur Samba pour partager des fichiers sur Virtual Box.</p>
+            <p>Dans la SAE 2.01 nous avons mis en place un réseau d'école dans le type de UJM en utilisant Cisco Packet Tracer et des routeurs physiques.</p>
+        </section>
+
+        <hr class="ac-divider">
+
+        {# Ressenti #}
+        <section class="ac-section">
+            <h5 class="ac-section-titre">Ressenti (pendant l'action)</h5>
+            <p>C'était assez fluide pour comprendre le fonctionnement du routage classique comparé au Samba où cela a été beaucoup plus dur.</p>
+        </section>
+
+        <hr class="ac-divider">
+
+        {# Analyse #}
+        <section class="ac-section">
+            <h5 class="ac-section-titre">Analyse (réflexion sur l'expérience)</h5>
+            <ul class="sae-liste">
+                <li>L'activité m'a permis de savoir gérer un réseau inter VLAN et inter sites</li>
+                <li>Savoir bien différencier les types d'erreurs pour pouvoir les contrer</li>
+                <li>L'utilisation d'outils adaptés (Cisco Packet Tracer, Putty)</li>
+            </ul>
+        </section>
+
+        <hr class="ac-divider">
+
+        {# Ce qui a bien fonctionné #}
+        <section class="ac-section">
+            <h5 class="ac-section-titre ac-positive">✓ Ce qui a bien fonctionné</h5>
+            <p>Le routage inter VLAN a bien fonctionné et inter switchs, la configuration des PC et la mise en place de la topologie sur Packet Tracer et même en physique.</p>
+        </section>
+
+        <hr class="ac-divider">
+
+        {# Ce qui a mal fonctionné #}
+        <section class="ac-section">
+            <h5 class="ac-section-titre ac-negative">✗ Ce qui a mal fonctionné</h5>
+            <p>Le démarrage de Samba a été très difficile car en étant débutant sur les environnements CMD de Linux, on n'est pas forcément très à l'aise.</p>
+        </section>
+
+        <hr class="ac-divider">
+
+        {# Plan d'action #}
+        <section class="ac-section">
+            <h5 class="ac-section-titre">Plan d'action pour l'avenir</h5>
+            <p>Continuer de développer des réseaux Samba et Packet Tracer pour devenir meilleur.</p>
+        </section>
+
+        <hr class="ac-divider">
+
+        {# Conclusion #}
+        <section class="ac-section">
+            <h5 class="ac-section-titre">Conclusion</h5>
+            <p>Cette compétence m'a beaucoup plu, elle permet de montrer le potentiel de développement d'une topologie réseau et du partage de fichier, elle m'a aussi permis d'améliorer ma résistance aux potentielles erreurs que l'on peut rencontrer.</p>
+        </section>
+
+        <hr class="ac-divider">
+
+        {# Note #}
+        <div class="text-center mt-2">
+            <span class="ac-note">Note obtenue : 3/4</span>
+        </div>
+
+    </div>
+
+</main>
+
+{% endblock %}
